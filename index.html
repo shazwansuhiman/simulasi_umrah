@@ -1,37 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulasi Umrah</title>
-    
-    <script type="importmap">
-    {
-        "imports": {
-            "react": "https://esm.sh/react@18",
-            "react-dom": "https://esm.sh/react-dom@18",
-            "react-dom/client": "https://esm.sh/react-dom@18/client",
-            "lucide-react": "https://esm.sh/lucide-react@0.300.0"
-        }
-    }
-    </script>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulasi Umrah RPG</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-</head>
-<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen m-0 p-0">
-    <div id="root" class="w-full h-full flex items-center justify-center"></div>
-
-    <script type="text/babel" data-type="module">
-        import React from 'react';
-        import { createRoot } from 'react-dom/client';
-        import UmrahRPG from './umrah-simulator.jsx';
-
-        // Mount komponen utama ke dalam pembungkus #root
-        const container = document.getElementById('root');
-        const root = createRoot(container);
-        root.render(<UmrahRPG />);
-    </script>
-</body>
+  </head>
+  <body class="bg-gray-900 m-0 p-0 text-white">
+    <div id="root"></div>
+    <script type="module" src="/main.jsx"></script>
+  </body>
 </html>
