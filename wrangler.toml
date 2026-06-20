@@ -4,3 +4,6 @@ compatibility_date = "2026-06-20"
 
 [assets]
 directory = "./"
+
+[alias]
+"react" = "https://esm.sh/react@18"
