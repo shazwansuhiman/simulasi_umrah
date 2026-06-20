@@ -15,11 +15,12 @@
     <script type="text/babel" src="umrah-simulator.jsx"></script>
 
     <script type="text/babel">
-        const RootElement = () => {
+        // Wrapper element to run your component
+        const App = () => {
             return <UmrahSimulator />; 
         };
         const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<RootElement />);
+        root.render(<App />);
     </script>
 </body>
 </html>
