@@ -1,4 +1,4 @@
-
+import { useState, useEffect, useRef, useCallback } from "react";
 /* =========================================================================
    SIMULASI UMRAH — RPG (gaya pixel berwarna, tanpa badan handheld)
    Top-down tile RPG: gerak grid, briefing + maklumat + doa + kuiz tiap stesen.
