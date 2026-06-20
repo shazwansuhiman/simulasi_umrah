@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulasi Umrah</title>
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body class="bg-gray-100">
     <div id="root"></div>
 
-    <script type="text/babel" data-type="module" src="umrah-simulator.jsx"></script>
+    <script type="text/babel" src="umrah-simulator.jsx"></script>
 
     <script type="text/babel">
-        // Wrapper element to run your component
-        const App = () => {
-            return <UmrahSimulator />; 
-        };
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
+        // Wait for the scripts to fully execute into the window space
+        window.addEventListener('load', () => {
+            // Your file defines "UmrahRPG" which gets bound globally by Babel
+            const Component = window.UmrahRPG;
+
+            if (Component) {
+                const root = ReactDOM.createRoot(document.getElementById('root'));
+                root.render(<Component />);
+            } else {
+                console.error("Component UmrahRPG not found yet.");
+            }
+        });
     </script>
 </body>
 </html>
